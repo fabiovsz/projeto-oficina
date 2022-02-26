@@ -1,0 +1,108 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+header {
+    background-color: rgb(25, 82, 168);
+    padding: 20px 0px 20px 0px;
+    
+}
+
+.navbar {
+    position: relative;    
+    width: 400px;
+    height: 100px;
+    margin: 0 auto;       
+}
+
+.titulo-header {
+    position: absolute;
+    top: 40px;
+    right: 50px;
+    color: white;
+    font-size: 2em;
+    
+}
+
+.titulos {
+    text-align: center;
+    font-size: 1.5em;
+    margin: 10px 0 0 0;
+}
+
+.gerenciador {
+    width: 940px;
+    padding: 30px 0;
+    margin: 0 auto;
+    text-align: center;
+         
+}
+
+.gerenciador li {
+    background-color: rgb(25, 82, 168);
+    display: inline-block;
+    text-align: center;
+    vertical-align: top;
+    padding: 15px 0;
+    margin: 0 0 0 15px;
+    box-sizing: border-box;
+    border: 2.5px solid black;
+    width: 15%;
+    border-radius: 10px;   
+    transition: 200ms all;
+}
+
+.gerenciador li:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.info {
+    color: white;
+    font-size: 15px;
+    margin-top: 10px;
+    user-select: none;
+}
+
+.gerenciador li img {
+    width: 35px;
+    height: 35px;
+}
+
+/*
+CSS do cadastro de orçamentos
+*/
+
+.form-orcamento {
+    margin-left: 70px;
+}
+.add-orcamento {
+    width: 940px;
+}
+
+form label {
+    display: block;
+    margin: 20px 0 0 0px;
+}
+
+.input {
+    width: 40%;
+    height: 20px;
+    margin-top: 5px;
+}
+
+#desc {
+    margin: 5px 0 0 0;
+    display: block;
+    margin-bottom: 8px;
+}
+
+#salvar {
+    background-color: orange;
+    color: white;    
+    width: 30%;
+    font-size: 16px;
+    border: none;
+    padding: 15px 0;
+    margin-bottom: 50px;
+    cursor: pointer;
+}
