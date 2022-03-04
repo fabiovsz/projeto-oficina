@@ -10,8 +10,8 @@
         <title>Oficina Speed</title>
     </head>
     <body>
-        <header>
-            <div class="navbar">
+        <header>           
+            <div class="navbar">                
                 <h1 class="titulo-logo"><img src="images/speed-logo.png" width="27%" alt="logo"></h1>
                 <h1 class="titulo-header">Oficina Speed</h1>                
             </div>
@@ -23,21 +23,51 @@
                     <li id="adicionar">
                         <img src="images/plus-icon.png" width="5%" alt="add-icon">
                         <p class="info">Adicionar Orçamento</p>
-                    </li>
-                    <li id="editar">
-                        <img src="images/pencil-icon.png" alt="pencil-icon">
-                        <p class="info">Editar Orçamentos</p>
-                    </li>
-                    <li id="buscar">
-                        <img src="images/search-icon.png" alt="search-icon">
-                        <p class="info">Buscar Orçamentos</p>
-                    </li>
+                    </li>                                   
                 </ul>
             </section>
+            <div id="modal" class="modal">
+                <div class="modal-content">
+                    <header class="modal-header">
+                        <h2>Novo Orçamento</h2>
+                        <span class="modal-close" id="modalClose">&#10006;</span>
+                    </header>
+                    <form class="form-orcamento" id="form" autocomplete="off">                     
+                        <input class="modal-input" type="text" name="cliente" data-index="new" id="cliente" placeholder="Nome do cliente" required>                    
+                        <input class="modal-input" type="tel"  name="telefone" id="telefone" placeholder="Telefone" required oninput = "this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*)\./g, '$1');">                                                       
+                        <input class="modal-input" type="date" name="data" id="data" placeholder="Data do Orçamento" required>                 
+                        <input class="modal-input" type="text" name="vendedor" id="vendedor" placeholder="Vendedor" required>                   
+                        <input class="modal-input" type="text" name="valor" id="valor" placeholder="Valor" required oninput = "this.value = this.value.replace(/[^0-9,]/g, '').replace(/(\..*)\./g, '$1');" />              
+                        <input class="modal-input" type="text" name="desc" id="desc" placeholder="Descrição do Orçamento" required>                        
+                    </form>    
+                    <footer class="modal-footer">
+                        <button id="salvar">Salvar</button>
+                        <button id="cancelar">Cancelar</button>
+                    </footer>
+                </div>                              
+            </div>
+            <div>
+                <table id="tabela-orcamentos" class="records">
+                    <thead>
+                        <tr>
+                            <th>Cliente</th>
+                            <th>Telefone</th>
+                            <th>Data</th>
+                            <th>Vendedor</th>
+                            <th>Valor</th>
+                            <th>Descrição</th>
+                            <th>Ação</th>
+                        </tr>                        
+                    </thead>
+                    <tbody>                            
+                    </tbody>
+                </table>    
+            </div>
+            
         </main>
         <footer>
             
         </footer>
-        <script src="js/adicionar.js"></script>    
+        <script src="js/main.js"></script>      
     </body>
 </html>
